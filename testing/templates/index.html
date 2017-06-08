@@ -1,0 +1,39 @@
+<!-- testing/templates/index.html -->
+<!DOCTYPE html>
+ 
+<html>
+{% load static %}
+<head>
+	<title> SWM </title>
+	<style>
+		body{
+			background-image: url({% static "bluesky.jpg"%});
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div>
+		<p> &nbsp; </p>
+		<center><h1> SOLID WASTE MANAGEMENT WORKFLOW </h1></center>
+		<p> &nbsp; </p>
+		<hr>
+	</div>
+
+
+	<div>
+
+		{% if user.is_authenticated %}
+		Welcome {{ user.username }}
+		(<a href="/logout">LogOut</a>)
+		{% else %}
+		<p> &nbsp; </p>
+		<a href="/login">LogIn</a> | <a href="/register">SignUp</a> | <a href = "/faq"> Queries and FAQs </a> | <a href = "/contact"> Contact Us </a>
+		{% endif %}
+
+	</div>
+	<p> &nbsp; </p>
+
+</body>
+</html>
