@@ -25,15 +25,34 @@
 	<div>
 
 		{% if user.is_authenticated %}
-		Welcome {{ user.username }}
-		(<a href="/logout">LogOut</a>)
+		Welcome {{ user.username }}!
+		(<a href="/logout">LogOut</a>|<a href="/profile">Profile</a>)
+		<p><br /><p>
+			Please choose the form to fill:
+			<ul>
+				<li> <a href="/form1"> FORM-1 </a> </li>
+				<li> <a href="/form1"> FORM-2 </a> </li>
+				<li> <a href="/form3"> FORM-3 </a> </li>
+				<li> <a href="/form4"> FORM-4 </a> </li>
+				<li> <a href="/form1"> FORM-5 </a> </li>
+				<li> <a href="/form6"> FORM-6 </a> </li>
+			</ul>
 		{% else %}
 		<p> &nbsp; </p>
-		<a href="/login">LogIn</a> | <a href="/register">SignUp</a> | <a href = "/faq"> Queries and FAQs </a> | <a href = "/contact"> Contact Us </a>
+		<a href="/login">LogIn</a> | <a href="/register">SignUp</a>
+		<!--  | <a href = "/faq"> Queries and FAQs </a> -->
 		{% endif %}
 
 	</div>
 	<p> &nbsp; </p>
+
+	<hr>
+	<p> &nbsp; </p>
+	<div>
+		<p> Information regarding Solid Waste Management Rules can be downloaded from: <a href="/download"> SWM </a> <p>
+	</div>
+
+
 
 </body>
 </html>

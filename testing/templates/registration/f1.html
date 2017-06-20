@@ -1,0 +1,9 @@
+<body>
+<form action="." method="post" name="book" id="book">{% csrf_token %}
+<table>
+<tr><td>{{form.user.user_name}}</td></tr>
+<tr><td>{{form.address.label}}</td><td>{{form.address}}</td></tr>
+<tr><td>{{form.fax.label}}</td><td>{{form.fax}}</td></tr>
+<tr><td></td><td><input type="button" name="btnSave" id="bntSave" value="Save"  class = "default2"/></td>
+</table>
+</body>

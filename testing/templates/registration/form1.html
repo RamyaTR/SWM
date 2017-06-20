@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}FORM1{% endblock %}
+{% block head %}<center><h1>FORM</h1></center><hr>{% endblock %}
+{% block content %}
+<form method="post" action="." enctype="multipart/form-data">
+<!--{{ form.as_p }}-->
+{{ form.errors }}
+{{ form.non_field_errors }}
+<!--
+<tr><td>{{form.user.label}}</td></tr>
+<tr><td>{{form.address.label}}</td><td>{{form.address}}</td></tr>
+<tr><td>{{form.fax.label}}</td><td>{{form.fax}}</td></tr> -->
+
+<tr><td>Name of the local body/agency appointed by them/ operator of facility: &emsp; </td><td>{{form.address}}</td></tr><br>
+
+<tr><td>Fax No.: &emsp; </td><td>{{form.fax}}</td></tr><br>
+
+<tr><td>Nodal Officer and designation(Officer authorised by the local body or agency responsible for operation of processing/ treatment or disposal facility): &emsp; </td><td>{{form.nodal}}</td></tr><br>
+
+<tr><td>Authorisation required for setting up and operation of the facility (Please select an option): &emsp; </td><td>{{form.authorization}}</td></tr><br><hr>
+
+<p> <b> Attach copies of Documents: </b> </p><br>
+
+<tr><td>Site clearance (local body) [please name document as &lt; Username &gt;_SC]: &emsp; </td><td>{{form.site_clear}}</td></tr><br>
+
+<tr><td>Proof of Environmental Clearance [please name document as &lt; Username &gt;_PEC]: &emsp; </td><td>{{form.env_clear}}</td></tr><br>
+
+<tr><td>Consent for establishment [please name document as &lt; Username &gt;_CE]: &emsp; </td><td>{{form.consent}}</td></tr><br>
+
+<tr><td>Agreement between municipal authority and operating agency [please name document as &lt; Username &gt;_Agreemnt]: &emsp; </td><td>{{form.agreement}}</td></tr><br>
+
+<tr><td>Investment on the project and expected return [please name document as &lt; Username &gt;_IR]: &emsp; </td><td>{{form.investment}}</td></tr><br><hr>
+
+<p> <br /> <b>Processing/recycling/treatment of solid waste: </b></p><br>
+
+<tr><td>Quantity of waste to be recycled per day (in tons): &emsp; </td><td>{{form.quant_recycle}}</td></tr><br>
+
+<tr><td>Quantity of waste to be treated per day (in tons): &emsp; </td><td>{{form.quant_treat}}</td></tr><br>
+
+<tr><td>Quantity of waste to be disposed per day (in tons): &emsp; </td><td>{{form.quant_dispose}}</td></tr><br>
+
+<tr><td>Utilisation programme for waste processed (Product utilisation): &emsp; </td><td>{{form.util}}</td></tr><br>
+
+<tr><td>Methodology for disposal (attach details) [please name document as &lt; Username &gt;_MD]: &emsp; </td><td>{{form.method_dis}}</td></tr><br>
+
+<tr><td>Quantity of leachate (in tons): &emsp; </td><td>{{form.quant_leach}}</td></tr><br>
+
+<tr><td>Treatment technology for leachate: &emsp; </td><td>{{form.treatleach}}</td></tr><br>
+
+<tr><td>Measures to be taken for prevention and control of environmental pollution: &emsp; </td><td>{{form.measure}}</td></tr><br>
+
+<tr><td>Measures to be taken for safety of workers working in the plant: &emsp; </td><td>{{form.safety}}</td></tr><br>
+
+<tr><td>Details on solid waste processing/recycling/ treatment/disposal facility (to be attached) [please name document as &lt; Username &gt;_DSW]: &emsp; </td><td>{{form.details}}</td></tr><br><hr>
+
+
+<p> <br /> <b> Disposal of Solid Waste </b> </p><br>
+
+<tr><td>Number of sites identified: &emsp; </td><td>{{form.no_sw}}</td></tr><br>
+
+<tr><td>Quantity of waste to be disposed per day (in tons): &emsp; </td><td>{{form.quant_sw}}</td></tr><br>
+
+<tr><td>Details of methodology or criteria followed for site selection (attach) [please name document as &lt; Username &gt;_SS]: &emsp; </td><td>{{form.details_sw}}</td></tr><br>
+
+<tr><td>Details of existing site under operation: &emsp; </td><td>{{form.op_sw}}</td></tr><br>
+
+<tr><td>Methodology and operational details of landfilling: &emsp; </td><td>{{form.landfill_sw}}</td></tr><br>
+
+<tr><td>Measures taken to check environmental pollution: &emsp; </td><td>{{form.poll}}</td></tr><br>
+
+<tr><td>Date: &emsp; </td><td>{{form.date}}</td></tr><br>
+
+<tr><td>Any other information (optional): &emsp; </td><td>{{form.info}}</td></tr><br>
+<p> &nbsp; </p>
+
+<!---->
+
+
+<input type="submit" value="Submit" />
+{% csrf_token %}
+</form>
+{% endblock %}

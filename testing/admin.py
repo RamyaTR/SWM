@@ -3,6 +3,9 @@ from django.contrib import admin
 # Register your models here.
 
 
-from .models import Post
+from testing.models import Form1
+admin.site.register(Form1)
 
-admin.site.register(Post)
+from testing.models import Form3
+admin.site.register(Form3)
+

@@ -8,8 +8,9 @@
 <div id="nav">
 <a href="/">Home</a> |
 {% if user.is_authenticated %}
-welcome {{ user.username }}
-(<a href="/logout">LogOut</a>)
+Welcome {{ user.username }} !
+
+(<a href="/logout">LogOut</a> | <a href ="/profile"> Profile </a>)
 {% else %}
 <a href="/login/">LogIn</a> |
 <a href="/register/">SignUp</a>
